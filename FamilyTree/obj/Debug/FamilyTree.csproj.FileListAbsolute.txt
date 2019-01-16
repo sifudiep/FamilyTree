@@ -1,0 +1,7 @@
+c:\users\mikael diep\source\repos\FamilyTree\FamilyTree\bin\Debug\FamilyTree.exe.config
+c:\users\mikael diep\source\repos\FamilyTree\FamilyTree\bin\Debug\FamilyTree.exe
+c:\users\mikael diep\source\repos\FamilyTree\FamilyTree\bin\Debug\FamilyTree.pdb
+c:\users\mikael diep\source\repos\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csprojAssemblyReference.cache
+c:\users\mikael diep\source\repos\FamilyTree\FamilyTree\obj\Debug\FamilyTree.csproj.CoreCompileInputs.cache
+c:\users\mikael diep\source\repos\FamilyTree\FamilyTree\obj\Debug\FamilyTree.exe
+c:\users\mikael diep\source\repos\FamilyTree\FamilyTree\obj\Debug\FamilyTree.pdb
