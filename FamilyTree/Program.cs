@@ -11,6 +11,7 @@ namespace FamilyTree
         /*
          *    #Partner
          *    ¤Parents
+         *    %Birthyear
          */
         static void Main(string[] args)
         {
@@ -38,14 +39,15 @@ namespace FamilyTree
 
             }
         }
+        
         static void Instructions()
         {
             Console.Clear();
             Console.WriteLine("Add a person to the family tree!");
-            Console.WriteLine("By writing the NAME seperated by the parents");
-            Console.WriteLine("I.e : 'David/#Linda/¤Margaret&Per");
-            Console.WriteLine("In this example David is the new Person to be added,Linda is Davids Partner and Margaret and Per are Davids parents.");
-            Console.WriteLine("If David is the first known generation of the family, simply dont add the slash(/) to parents");
+            Console.WriteLine("By writing the NAME separated by the parents");
+            Console.WriteLine("I.e : 'David/#Linda%1993/¤Margaret%1970&Per%1965");
+            Console.WriteLine("In this example David is the new Person to be added,Linda is Davids Partner and she's born in 1993.");
+            Console.WriteLine("If David is the first known generation of the family, simply dont add the '/¤Margaret%1970&Per%1965' input");
             Console.WriteLine("to register David as the oldest known generation of the family.");
         }
         static void Finished(List<Person> familyTree)
@@ -54,64 +56,59 @@ namespace FamilyTree
             Console.WriteLine("Finished!");
         }
 
-        static Person DeconstructInput(string input)
+        static Person AddToFamilyTree(string input, List<Person> familyTree)
         {
             var person = new Person();
             var people = input.Split('/');
-            switch (people[1][0])
-            {
-                case '#':
-                    // cant use string for a partner, find the partner with the string instead.
-                    person.Partner = people[1].TrimStart('#')
-                    break;
-                
-            }
-            
+
+            AddParentsAndPartner(people[1], person, familyTree);
+            AddParentsAndPartner(people[2], person, familyTree);
             
             return person;
+        }
+
+        static void AddParentsAndPartner(string people, Person person, List<Person> familyTree )
+        {
+            if (people[0] == '#')
+            {
+                var partnerInfo = people.Split('%');
+                var partnerName = partnerInfo[0];
+                var partnerBirthyear = Int32.Parse(partnerInfo[1]);
+                person.Partner = Person.FindPerson(partnerName, partnerBirthyear, familyTree);
+                person.Partner.Partner = person;
+            }
+            else if (people[0] == '¤')
+            {
+                var parents = people.Split('&');
+                    
+                var firstParentInfo = parents[0].Split('%');
+                var firstParentName = firstParentInfo[0].Remove(0,1);
+                var firstParentBirthyear = Int32.Parse(firstParentInfo[1]);
+                person.Parents.Add(Person.FindPerson(firstParentName, firstParentBirthyear, familyTree));
+                Person.FindPerson(firstParentName, firstParentBirthyear, familyTree).Children.Add(person);
+
+                var secondParentInfo = parents[1].Split('%');
+                var secondParentName = secondParentInfo[0];
+                var secondParentBirthyear = Int32.Parse(secondParentInfo[1]);
+                person.Parents.Add(Person.FindPerson(secondParentName, secondParentBirthyear, familyTree));
+                Person.FindPerson(secondParentName, secondParentBirthyear, familyTree).Children.Add(person);
+            }
         }
         
         static bool ValidateInput(string input)
         {
             var people = input.Split('/');
-            
+
             if (people[0].Length == 0)
-            {
                 return false;
-            }
+
+            if (people[1][0] != '#' && people[1][0] != '¤')
+                return false;
+
+            if (!people[1].Contains('%') || !people[2].Contains('%'))
+                return false;
             
-            switch (people[1][0])
-            {
-                case '#':
-                    
-                    break;
-            }
             return true;
-        }
-
-        static void AddToFamilyTree(List<Person> familyTree, string input)
-        {
-            var people = input.Split('/');
-            var person = people[0];
-            var partner = people[1];
-            var parents = people[2].Split('&');
-            
-            var newFamilyMember = new Person();
-            newFamilyMember.Name = person;
-
-            for (int i = 0; i < familyTree.Count; i++) {
-                if (familyTree[i].Name == parents[0] || familyTree[i].Name == parents[1]) {
-                    newFamilyMember.Parents.Add(familyTree[i]);
-                }
-            }
-
-            for (int i = 0; i < familyTree.Count; i++)
-            {
-                if (familyTree[i].Name == parents[0] || familyTree[i].Name == parents[1])
-                {
-                    familyTree[i].Children.Add(newFamilyMember);
-                }
-            }
         }
     }
 }
