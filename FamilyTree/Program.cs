@@ -43,7 +43,7 @@ namespace FamilyTree
             Console.Clear();
             Console.WriteLine("Add a person to the family tree!");
             Console.WriteLine("By writing the NAME seperated by the parents");
-            Console.WriteLine("I.e : 'David/Linda/Margaret&Per");
+            Console.WriteLine("I.e : 'David/#Linda/¤Margaret&Per");
             Console.WriteLine("In this example David is the new Person to be added,Linda is Davids Partner and Margaret and Per are Davids parents.");
             Console.WriteLine("If David is the first known generation of the family, simply dont add the slash(/) to parents");
             Console.WriteLine("to register David as the oldest known generation of the family.");
@@ -54,64 +54,38 @@ namespace FamilyTree
             Console.WriteLine("Finished!");
         }
 
+        static Person DeconstructInput(string input)
+        {
+            var person = new Person();
+            var people = input.Split('/');
+            switch (people[1][0])
+            {
+                case '#':
+                    // cant use string for a partner, find the partner with the string instead.
+                    person.Partner = people[1].TrimStart('#')
+                    break;
+                
+            }
+            
+            
+            return person;
+        }
+        
         static bool ValidateInput(string input)
         {
-            int slashCounter = 0;
-            int andCounter = 0;
-            bool firstGeneration = false;
-            for (int i = 0; i < input.Length; i++) {
-                if (input[i] == '/') {
-                    slashCounter++;
-                } else if (input[i] == '&') {
-                    andCounter++;
-                }
-            }
-
-            if (slashCounter < 2 || slashCounter > 0)
-            {
-                firstGeneration = true;
-                Console.WriteLine("First Generation!");
-                return true;
-            }
-
-            if (slashCounter > 2)
-            {
-                Console.WriteLine("SlashCounter > 2");
-                return false;
-            }
-
-            if (andCounter == 0) {
-                Console.WriteLine("andCounter == 0");
-                return false;
-            }
-
-            if (andCounter != 1) {
-                Console.WriteLine("andCounter is not 1");
-                return false;
-            }
-
             var people = input.Split('/');
+            
             if (people[0].Length == 0)
             {
-                Console.WriteLine("people[0].Length == 0");
                 return false;
             }
-
-            if (people[1].Length == 0)
-            {
-                Console.WriteLine("people[1].Length== 0");    
-            }
             
-            if (!firstGeneration)
+            switch (people[1][0])
             {
-                var parents = people[2].Split('&');
-                if (parents[0].Length == 0 || parents[1].Length == 0)
-                {
-                    Console.WriteLine("parents[0].Length == 0 || parents[1].Length == 0");
-                    return false;                     
-                }
+                case '#':
+                    
+                    break;
             }
-            
             return true;
         }
 
