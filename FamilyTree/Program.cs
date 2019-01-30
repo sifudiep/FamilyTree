@@ -34,6 +34,18 @@ namespace FamilyTree
                 {
                     ShowRelations(input, FamilyTree);
                 }
+                else if (input == "test")
+                {
+                    Console.WriteLine("START OF TEST!");
+                    var david = new Person();
+                    david.Name = "david";
+                    david.Birthyear = 1996;
+                    FamilyTree.Add(david);
+                    
+                    var person = Person.FindPerson("mike", 1996, FamilyTree, true);
+                    Console.WriteLine(person.Name);
+                    Console.WriteLine("END OF TEST");
+                }
                 else
                 {
                     if (ValidateInput(input))
@@ -52,14 +64,12 @@ namespace FamilyTree
         {
             Console.Clear();
             Console.WriteLine("Add a person to the family tree!");
-            Console.WriteLine("By writing the NAME separated by the parents");
-            Console.WriteLine("I.e : 'David%1992/#Linda%1993/¤Margaret%1970&Per%1965");
+            Console.WriteLine("By writing the 'NAME%BIRTHYEAR/#PARTNER%BIRTHYEAR/¤PARENT%BIRTHYEAR&PARENT%BIRTHYEAR'");
+            Console.WriteLine("Take note of the symbols such as '%, #, /, &, ¤'");
             Console.WriteLine(
-                "In this example David is the new Person to be added,Linda is Davids Partner and she's born in 1993.");
-            Console.WriteLine(
-                "If David is the first known generation of the family, simply dont add the '/¤Margaret%1970&Per%1965' input");
-            Console.WriteLine("to register David as the oldest known generation of the family.");
-            Console.WriteLine("To find relations of a person simple type i.e '?David%1993' this will search and show ");
+                "If David is the first known generation of the family, simply dont add the Partner and Parents");
+            Console.WriteLine("Meaning the input should have this format 'NAME%BIRTHYEAR' ");
+            Console.WriteLine("To find relations of a person type in the following format : '?NAME%BIRTHYEAR'");
         }
 
         private static void Finished(List<Person> familyTree)
@@ -77,9 +87,17 @@ namespace FamilyTree
             person.Name = personInfo[0];
             person.Birthyear = Convert.ToInt32(personInfo[1]);
 
-            AddParentsAndPartner(people[1], person, familyTree);
-            AddParentsAndPartner(people[2], person, familyTree);
+            if (people.Length > 1)
+            {
+                AddParentsAndPartner(people[1], person, familyTree);
+            }
 
+            if (people.Length == 3)
+            {
+                AddParentsAndPartner(people[2], person, familyTree);
+            }
+
+            familyTree.Remove(Person.FindPerson(person.Name, person.Birthyear, familyTree, false));
             familyTree.Add(person);
         }
 
@@ -90,7 +108,8 @@ namespace FamilyTree
                 var partnerInfo = people.Split('%');
                 var partnerName = partnerInfo[0];
                 var partnerBirthyear = int.Parse(partnerInfo[1]);
-                person.Partner = Person.FindPerson(partnerName, partnerBirthyear, familyTree);
+                
+                person.Partner = Person.FindPerson(partnerName, partnerBirthyear, familyTree, true);
                 person.Partner.Partner = person;
             }
             else if (people[0] == '¤')
@@ -100,14 +119,14 @@ namespace FamilyTree
                 var firstParentInfo = parents[0].Split('%');
                 var firstParentName = firstParentInfo[0].Remove(0, 1);
                 var firstParentBirthyear = int.Parse(firstParentInfo[1]);
-                person.Parents.Add(Person.FindPerson(firstParentName, firstParentBirthyear, familyTree));
-                Person.FindPerson(firstParentName, firstParentBirthyear, familyTree).Children.Add(person);
+                person.Parents.Add(Person.FindPerson(firstParentName, firstParentBirthyear, familyTree, true));
+                Person.FindPerson(firstParentName, firstParentBirthyear, familyTree, true).Children.Add(person);
 
                 var secondParentInfo = parents[1].Split('%');
                 var secondParentName = secondParentInfo[0];
                 var secondParentBirthyear = int.Parse(secondParentInfo[1]);
-                person.Parents.Add(Person.FindPerson(secondParentName, secondParentBirthyear, familyTree));
-                Person.FindPerson(secondParentName, secondParentBirthyear, familyTree).Children.Add(person);
+                person.Parents.Add(Person.FindPerson(secondParentName, secondParentBirthyear, familyTree, true));
+                Person.FindPerson(secondParentName, secondParentBirthyear, familyTree, true).Children.Add(person);
             }
         }
 
@@ -118,11 +137,21 @@ namespace FamilyTree
             if (people[0].Length == 0)
                 return false;
 
-            if (people[1][0] != '#' && people[1][0] != '¤')
-                return false;
+            if (people.Length > 1)
+            {
+                if (people[1][0] != '#' && people[1][0] != '¤')
+                    return false;
+                if (people[1].Length < 3)
+                    return false;
+            }
 
-            if (!people[1].Contains('%') || !people[2].Contains('%'))
-                return false;
+            if (people.Length == 3)
+            {
+                if (people[2][0] != '#' && people[2][0] != '¤')
+                    return false;
+                if (people[2].Length < 3)
+                    return false;
+            }
 
             return true;
         }
@@ -130,18 +159,43 @@ namespace FamilyTree
         private static void ShowRelations(string input, List<Person> familyTree)
         {
             Console.WriteLine("ShowingRelations!");
-            Console.WriteLine("input: " + input);
             var personInfo = input.Split('%');
-            Console.WriteLine("personInfo[0] : " + personInfo[0].Remove(0,1));
-            Console.WriteLine("personInfo[1] : " + personInfo[1]);
-            var person = Person.FindPerson(personInfo[0].Remove(0, 1), Convert.ToInt32(personInfo[1]), familyTree);
+            var personName = personInfo[0].Remove(0,1);
+            var personBirthyear = Convert.ToInt32(personInfo[1]);
+            
+            var person = Person.FindPerson(personName, personBirthyear, familyTree, false);
+            if (person == new Person())
+            {
+                Console.WriteLine("Could not find the person.");
+            }
+            else
+            {
+                if (person.Parents.Count == 0)
+                {
+                    Console.WriteLine(personName + " parents are unknown.");
+                }
+                else
+                {
+                    Console.WriteLine(personName + "'s first parent : " + person.Parents[0].Name);
+                    Console.WriteLine(personName + "'s second parent : " + person.Parents[1].Name);
+                }
+                
+                if (person.Partner != new Person() && person.Partner != null)
+                {
+                    Console.WriteLine("Partner: " + person.Partner.Name);
+                }
+                else
+                {
+                    Console.WriteLine(personName + " does not have a partner.");
+                }
 
-//            Console.WriteLine("Parents : " + person.Parents[0] + " and " + person.Parents[1]);
-            Console.WriteLine("person.Parents.Count : " + person.Parents.Count);
-            Console.WriteLine("Partner : " + person.Partner);
-            for (var i = 0; i < person.Children.Count; i++)
-                Console.WriteLine("Child " + (i + 1) + " : " + person.Children[i]);
-            Console.WriteLine("---------------------");
-        }
+                if (person.Children.Count == 0)
+                {
+                    Console.WriteLine(personName + " does not have children.");
+                }
+                for (var i = 0; i < person.Children.Count; i++)
+                    Console.WriteLine("Child " + (i + 1) + " : " + person.Children[i].Name);
+            }
+        }    
     }
 }

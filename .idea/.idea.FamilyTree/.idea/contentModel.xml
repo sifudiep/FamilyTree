@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Mike\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Mike\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_FamilyTree.389146019.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Mike\Desktop\FamilyTree" t="IncludeFlat">
+    <e p="C:\Users\Mikael Diep\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Mikael Diep\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_FamilyTree.-1324309998.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Mikael Diep\source\repos\FamilyTree" t="IncludeFlat">
       <e p="FamilyTree" t="IncludeRecursive">
         <e p="App.config" t="Include" />
         <e p="bin" t="ExcludeRecursive" />

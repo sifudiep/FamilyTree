@@ -19,20 +19,23 @@ namespace FamilyTree
         /// <param name="birthyear">Birthyear of the wanted person</param>
         /// <param name="familyTree">Familytree of the person</param>
         /// <returns></returns>
-        public static Person FindPerson(string name, int birthyear, List<Person> familyTree)
+        public static Person FindPerson(string name, int birthyear, List<Person> familyTree, bool createPerson)
         {
-            Console.WriteLine("FamilyTree.Count: " + familyTree.Count);
-
             for (var i = 0; i < familyTree.Count; i++)
             {
-                if (familyTree[i].Name == name || familyTree[i].Birthyear == birthyear)
+                if (familyTree[i].Name == name && familyTree[i].Birthyear == birthyear)
                     return familyTree[i];
             }
             // Creates a new person if the person is not found.
-            var person = new Person();
-            person.Name = name;
-            person.Birthyear = birthyear;
-            return person;
+            if (createPerson)
+            {
+                var person = new Person();
+                person.Name = name;
+                person.Birthyear = birthyear;
+                return person;    
+            }
+            
+            return new Person();
         }
     }
 }
