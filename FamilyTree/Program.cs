@@ -8,7 +8,7 @@ namespace FamilyTree
     {
         /*
          *    #Partner
-         *    ¤Parents
+         *    @Parents
          *    %Birthyear
          *    ?Search
          */
@@ -64,12 +64,15 @@ namespace FamilyTree
         {
             Console.Clear();
             Console.WriteLine("Add a person to the family tree!");
-            Console.WriteLine("By writing the 'NAME%BIRTHYEAR/#PARTNER%BIRTHYEAR/¤PARENT%BIRTHYEAR&PARENT%BIRTHYEAR'");
-            Console.WriteLine("Take note of the symbols such as '%, #, /, &, ¤'");
+            Console.WriteLine("By writing the 'NAME%BIRTHYEAR/#PARTNER%BIRTHYEAR/@PARENT%BIRTHYEAR&PARENT%BIRTHYEAR'");
+            Console.WriteLine("Take note of the symbols such as '%, #, /, &, @'");
+            Console.WriteLine("Write '%' after every persons name to show separate birthyear and name.");
+            Console.WriteLine("Write '#' before the partners name");
+            Console.WriteLine("Write '@' before the FIRST parents name, do NOT add it before the second parents name.");
             Console.WriteLine(
-                "If David is the first known generation of the family, simply dont add the Partner and Parents");
+                "If David is the first known generation of the family, simply dont add the Parents(Partner is optional)");
             Console.WriteLine("Meaning the input should have this format 'NAME%BIRTHYEAR' ");
-            Console.WriteLine("To find relations of a person type in the following format : '?NAME%BIRTHYEAR'");
+            Console.WriteLine("To find relations of a person, type in the following format : '?NAME%BIRTHYEAR'");
         }
 
         private static void Finished(List<Person> familyTree)
@@ -112,7 +115,7 @@ namespace FamilyTree
                 person.Partner = Person.FindPerson(partnerName, partnerBirthyear, familyTree, true);
                 person.Partner.Partner = person;
             }
-            else if (people[0] == '¤')
+            else if (people[0] == '@')
             {
                 var parents = people.Split('&');
 
@@ -139,7 +142,7 @@ namespace FamilyTree
 
             if (people.Length > 1)
             {
-                if (people[1][0] != '#' && people[1][0] != '¤')
+                if (people[1][0] != '#' && people[1][0] != '@')
                     return false;
                 if (people[1].Length < 3)
                     return false;
@@ -147,7 +150,7 @@ namespace FamilyTree
 
             if (people.Length == 3)
             {
-                if (people[2][0] != '#' && people[2][0] != '¤')
+                if (people[2][0] != '#' && people[2][0] != '@')
                     return false;
                 if (people[2].Length < 3)
                     return false;
@@ -158,6 +161,7 @@ namespace FamilyTree
 
         private static void ShowRelations(string input, List<Person> familyTree)
         {
+            Console.WriteLine("");
             Console.WriteLine("ShowingRelations!");
             var personInfo = input.Split('%');
             var personName = personInfo[0].Remove(0,1);
@@ -195,6 +199,10 @@ namespace FamilyTree
                 }
                 for (var i = 0; i < person.Children.Count; i++)
                     Console.WriteLine("Child " + (i + 1) + " : " + person.Children[i].Name);
+
+                Console.WriteLine("BEFORE SHOWING GEN");
+                Console.WriteLine(person.GetGeneration(1));
+                Console.WriteLine("AFTER SHOWING GEN!");
             }
         }    
     }

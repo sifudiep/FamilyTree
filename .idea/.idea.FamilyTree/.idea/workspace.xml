@@ -3,13 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="a4dfc74b-e421-4b61-953a-f7a56f75165b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.FamilyTree/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FamilyTree/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.FamilyTree/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FamilyTree/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FamilyTree.sln.DotSettings.user" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree.sln.DotSettings.user" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyTree/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree/Person.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyTree/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree/Program.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyTree/bin/Debug/FamilyTree.exe" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree/bin/Debug/FamilyTree.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyTree/bin/Debug/FamilyTree.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree/bin/Debug/FamilyTree.pdb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyTree/obj/Debug/FamilyTree.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree/obj/Debug/FamilyTree.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FamilyTree/obj/Debug/FamilyTree.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree/obj/Debug/FamilyTree.csproj.FileListAbsolute.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyTree/obj/Debug/FamilyTree.exe" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree/obj/Debug/FamilyTree.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/FamilyTree/obj/Debug/FamilyTree.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/FamilyTree/obj/Debug/FamilyTree.pdb" afterDir="false" />
     </list>
@@ -21,61 +20,64 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FamilyTree/Program.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="173" column="17" lean-forward="true" selection-start-line="173" selection-start-column="17" selection-end-line="173" selection-end-column="17" />
+            <state relative-caret-position="402">
+              <caret line="208" column="1" lean-forward="true" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
               <folding>
-                <marker date="1548249786112" expanded="false" signature="6:66" ph="..." />
-                <marker date="1548249786112" expanded="true" signature="88:7603" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="117:7601" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="132:239" ph="/* ##Partner ... */" />
-                <marker date="1548249786112" expanded="true" signature="287:2095" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="414:2085" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="758:830" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="877:955" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="997:1087" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="1129:1608" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="1629:2071" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="1693:1864" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="2139:2810" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="2873:2966" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="3050:3712" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="3334:3431" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="3468:3565" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="3817:5211" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="3861:4225" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="4264:5201" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="5268:5904" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="5427:5629" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="5666:5868" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="5986:7591" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="6362:6455" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="6472:7581" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="6533:6646" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="6667:6902" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="6997:7107" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="7128:7245" ph="{...}" />
-                <marker date="1548249786112" expanded="true" signature="7294:7410" ph="{...}" />
+                <marker date="1548859785360" expanded="false" signature="6:66" ph="..." />
+                <marker date="1548859785360" expanded="true" signature="88:8119" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="117:8117" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="132:239" ph="/* ##Partner ... */" />
+                <marker date="1548859785360" expanded="true" signature="287:2095" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="414:2085" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="758:830" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="877:955" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="997:1087" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="1129:1608" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="1629:2071" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="1693:1864" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="2139:3116" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="3179:3272" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="3356:4018" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="3640:3737" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="3774:3871" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="4123:5517" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="4167:4531" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="4570:5507" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="5574:6210" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="5733:5935" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="5972:6174" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="6292:8107" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="6703:6796" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="6813:8097" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="6874:6987" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="7008:7243" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="7338:7448" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="7469:7586" ph="{...}" />
+                <marker date="1548859785360" expanded="true" signature="7635:7751" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/FamilyTree/Person.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="160">
-              <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+            <state relative-caret-position="300">
+              <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
               <folding>
-                <marker date="1548249474704" expanded="false" signature="6:47" ph="..." />
-                <marker date="1548249474704" expanded="true" signature="69:1477" ph="{...}" />
-                <marker date="1548249474704" expanded="true" signature="95:1475" ph="{...}" />
-                <marker date="1548249474704" expanded="true" signature="317:796" ph="///     Finds a person with the name and birthyear parameter inside the personList. ... " />
-                <marker date="1548249474704" expanded="true" signature="908:1469" ph="{...}" />
-                <marker date="1548249474704" expanded="true" signature="973:1131" ph="{...}" />
-                <marker date="1548249474704" expanded="true" signature="1225:1413" ph="{...}" />
+                <marker date="1548860146588" expanded="false" signature="6:47" ph="..." />
+                <marker date="1548860146588" expanded="true" signature="69:2031" ph="{...}" />
+                <marker date="1548860146588" expanded="true" signature="95:2029" ph="{...}" />
+                <marker date="1548860146588" expanded="true" signature="317:796" ph="///     Finds a person with the name and birthyear parameter inside the personList. ... " />
+                <marker date="1548860146588" expanded="true" signature="908:1469" ph="{...}" />
+                <marker date="1548860146588" expanded="true" signature="973:1131" ph="{...}" />
+                <marker date="1548860146588" expanded="true" signature="1225:1413" ph="{...}" />
+                <marker date="1548860146588" expanded="true" signature="1526:2023" ph="{...}" />
+                <marker date="1548860146588" expanded="true" signature="1772:1887" ph="{...}" />
+                <marker date="1548860146588" expanded="true" signature="1904:1974" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -91,6 +93,7 @@
       <find>.Count§</find>
       <find>Console.</find>
       <find>Console.WriteLine</find>
+      <find>¤</find>
     </findStrings>
     <replaceStrings>
       <replace>personNAme</replace>
@@ -103,21 +106,20 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/FamilyTree/Program.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/FamilyTree/Person.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EC39880-CFBE-477B-978C-6A88AC7F432C/d5/137a8c21/Number.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/FamilyTree/Person.cs" />
         <option value="$PROJECT_DIR$/FamilyTree/Program.cs" />
+        <option value="$PROJECT_DIR$/FamilyTree/Person.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="120" />
-    <option name="y" value="-29" />
-    <option name="width" value="1440" />
-    <option name="height" value="774" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -125,25 +127,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="FamilyTree" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-            <path>
-              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
-              <item name="FamilyTree" type="24d0babc:SolutionExplorerModelNode" />
-              <item name="FamilyTree" type="24d0babc:SolutionExplorerModelNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -198,6 +186,7 @@
       <workItem from="1547804149583" duration="8870000" />
       <workItem from="1548171135289" duration="3022000" />
       <workItem from="1548174376433" duration="2171000" />
+      <workItem from="1548857679292" duration="2467000" />
     </task>
     <task id="LOCAL-00001" summary="Refactoring code, using symbols instead of string position to determine parents and partner.">
       <created>1547644059872</created>
@@ -217,7 +206,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27086000" />
+    <option name="totallyTimeSpent" value="29553000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -229,16 +218,17 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19127516" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19349681" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.54815865" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.30985916" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -251,7 +241,7 @@
       <window_info anchor="bottom" id="Unit Tests" order="12" />
       <window_info anchor="bottom" id="Terminal" order="13" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="14" side_tool="true" weight="0.3286119" />
-      <window_info anchor="bottom" id="Build" order="15" weight="0.32719547" />
+      <window_info anchor="bottom" id="Build" order="15" weight="0.32719395" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -282,65 +272,62 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EC39880-CFBE-477B-978C-6A88AC7F432C/d5/137a8c21/Number.cs">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/7EC39880-CFBE-477B-978C-6A88AC7F432C/d5/137a8c21/Number.cs" />
+    <entry file="file://$PROJECT_DIR$/FamilyTree/Program.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="694" column="5" lean-forward="true" selection-start-line="694" selection-start-column="5" selection-end-line="694" selection-end-column="5" />
+        <state relative-caret-position="402">
+          <caret line="208" column="1" lean-forward="true" selection-start-line="208" selection-start-column="1" selection-end-line="208" selection-end-column="1" />
+          <folding>
+            <marker date="1548859785360" expanded="false" signature="6:66" ph="..." />
+            <marker date="1548859785360" expanded="true" signature="88:8119" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="117:8117" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="132:239" ph="/* ##Partner ... */" />
+            <marker date="1548859785360" expanded="true" signature="287:2095" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="414:2085" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="758:830" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="877:955" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="997:1087" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="1129:1608" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="1629:2071" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="1693:1864" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="2139:3116" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="3179:3272" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="3356:4018" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="3640:3737" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="3774:3871" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="4123:5517" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="4167:4531" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="4570:5507" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="5574:6210" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="5733:5935" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="5972:6174" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="6292:8107" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="6703:6796" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="6813:8097" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="6874:6987" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="7008:7243" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="7338:7448" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="7469:7586" ph="{...}" />
+            <marker date="1548859785360" expanded="true" signature="7635:7751" ph="{...}" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/FamilyTree/Person.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="22" column="9" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="9" />
+        <state relative-caret-position="300">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
           <folding>
-            <marker date="1548249474704" expanded="false" signature="6:47" ph="..." />
-            <marker date="1548249474704" expanded="true" signature="69:1477" ph="{...}" />
-            <marker date="1548249474704" expanded="true" signature="95:1475" ph="{...}" />
-            <marker date="1548249474704" expanded="true" signature="317:796" ph="///     Finds a person with the name and birthyear parameter inside the personList. ... " />
-            <marker date="1548249474704" expanded="true" signature="908:1469" ph="{...}" />
-            <marker date="1548249474704" expanded="true" signature="973:1131" ph="{...}" />
-            <marker date="1548249474704" expanded="true" signature="1225:1413" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FamilyTree/Program.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="173" column="17" lean-forward="true" selection-start-line="173" selection-start-column="17" selection-end-line="173" selection-end-column="17" />
-          <folding>
-            <marker date="1548249786112" expanded="false" signature="6:66" ph="..." />
-            <marker date="1548249786112" expanded="true" signature="88:7603" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="117:7601" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="132:239" ph="/* ##Partner ... */" />
-            <marker date="1548249786112" expanded="true" signature="287:2095" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="414:2085" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="758:830" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="877:955" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="997:1087" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="1129:1608" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="1629:2071" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="1693:1864" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="2139:2810" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="2873:2966" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="3050:3712" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="3334:3431" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="3468:3565" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="3817:5211" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="3861:4225" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="4264:5201" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="5268:5904" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="5427:5629" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="5666:5868" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="5986:7591" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="6362:6455" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="6472:7581" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="6533:6646" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="6667:6902" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="6997:7107" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="7128:7245" ph="{...}" />
-            <marker date="1548249786112" expanded="true" signature="7294:7410" ph="{...}" />
+            <marker date="1548860146588" expanded="false" signature="6:47" ph="..." />
+            <marker date="1548860146588" expanded="true" signature="69:2031" ph="{...}" />
+            <marker date="1548860146588" expanded="true" signature="95:2029" ph="{...}" />
+            <marker date="1548860146588" expanded="true" signature="317:796" ph="///     Finds a person with the name and birthyear parameter inside the personList. ... " />
+            <marker date="1548860146588" expanded="true" signature="908:1469" ph="{...}" />
+            <marker date="1548860146588" expanded="true" signature="973:1131" ph="{...}" />
+            <marker date="1548860146588" expanded="true" signature="1225:1413" ph="{...}" />
+            <marker date="1548860146588" expanded="true" signature="1526:2023" ph="{...}" />
+            <marker date="1548860146588" expanded="true" signature="1772:1887" ph="{...}" />
+            <marker date="1548860146588" expanded="true" signature="1904:1974" ph="{...}" />
           </folding>
         </state>
       </provider>

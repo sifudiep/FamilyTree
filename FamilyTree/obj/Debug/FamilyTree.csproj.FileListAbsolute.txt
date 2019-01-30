@@ -8,6 +8,7 @@ c:\users\mikael diep\source\repos\FamilyTree\FamilyTree\obj\Debug\FamilyTree.pdb
 C:\Users\Mike\Desktop\familytree\FamilyTree\bin\Debug\FamilyTree.exe.config
 C:\Users\Mike\Desktop\familytree\FamilyTree\bin\Debug\FamilyTree.exe
 C:\Users\Mike\Desktop\familytree\FamilyTree\bin\Debug\FamilyTree.pdb
-C:\Users\Mike\Desktop\familytree\FamilyTree\obj\Debug\FamilyTree.csprojResolveAssemblyReference.cache
 C:\Users\Mike\Desktop\familytree\FamilyTree\obj\Debug\FamilyTree.exe
 C:\Users\Mike\Desktop\familytree\FamilyTree\obj\Debug\FamilyTree.pdb
+C:\Users\Mike\Desktop\familytree\FamilyTree\obj\Debug\FamilyTree.csprojAssemblyReference.cache
+C:\Users\Mike\Desktop\familytree\FamilyTree\obj\Debug\FamilyTree.csproj.CoreCompileInputs.cache
