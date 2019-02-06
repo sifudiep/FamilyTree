@@ -40,13 +40,11 @@ namespace FamilyTree
 
         public int GetGeneration(int generationCounter)
         {
-            Console.WriteLine("Inside GetGeneration");
-            Console.WriteLine("Value of generationCounter : " + generationCounter);
             if (Parents.Count > 0)
             {
                 generationCounter++;
                 Parents[0].GetGeneration(generationCounter);
-            }
+            } 
             
             return generationCounter;
         }

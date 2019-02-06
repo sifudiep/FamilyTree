@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace FamilyTree
 {
@@ -29,23 +30,16 @@ namespace FamilyTree
                 else if (input == "!finished")
                 {
                     Finished(FamilyTree);
+                    
                 }
                 else if (input[0] == '?')
                 {
-                    ShowRelations(input, FamilyTree);
-                }
-                else if (input == "test")
-                {
-                    Console.WriteLine("START OF TEST!");
-                    var david = new Person();
-                    david.Name = "david";
-                    david.Birthyear = 1996;
-                    FamilyTree.Add(david);
-                    
-                    var person = Person.FindPerson("mike", 1996, FamilyTree, true);
-                    Console.WriteLine(person.Name);
-                    Console.WriteLine("END OF TEST");
-                }
+                    var trimmedInput = input.Remove(0,1);
+                    var inputRegEx = new Regex(@"^[0-9]");
+                    var matches = inputRegEx.Match(trimmedInput);
+                    Console.WriteLine(matches);
+                    ShowRelations(trimmedInput, FamilyTree);
+                } 
                 else
                 {
                     if (ValidateInput(input))
@@ -79,6 +73,7 @@ namespace FamilyTree
         {
             Console.Clear();
             Console.WriteLine("Finished!");
+            Console.WriteLine("Type '!save' if you wish to save the familyTree to a txt file. ");
         }
 
         private static void AddToFamilyTree(string input, List<Person> familyTree)
@@ -109,11 +104,12 @@ namespace FamilyTree
             if (people[0] == '#')
             {
                 var partnerInfo = people.Split('%');
-                var partnerName = partnerInfo[0];
+                var partnerName = partnerInfo[0].Remove(0,1);;
                 var partnerBirthyear = int.Parse(partnerInfo[1]);
                 
                 person.Partner = Person.FindPerson(partnerName, partnerBirthyear, familyTree, true);
                 person.Partner.Partner = person;
+                familyTree.Add(person.Partner);
             }
             else if (people[0] == '@')
             {
@@ -123,13 +119,22 @@ namespace FamilyTree
                 var firstParentName = firstParentInfo[0].Remove(0, 1);
                 var firstParentBirthyear = int.Parse(firstParentInfo[1]);
                 person.Parents.Add(Person.FindPerson(firstParentName, firstParentBirthyear, familyTree, true));
-                Person.FindPerson(firstParentName, firstParentBirthyear, familyTree, true).Children.Add(person);
 
                 var secondParentInfo = parents[1].Split('%');
                 var secondParentName = secondParentInfo[0];
                 var secondParentBirthyear = int.Parse(secondParentInfo[1]);
                 person.Parents.Add(Person.FindPerson(secondParentName, secondParentBirthyear, familyTree, true));
-                Person.FindPerson(secondParentName, secondParentBirthyear, familyTree, true).Children.Add(person);
+               
+                var firstParent = Person.FindPerson(firstParentName, firstParentBirthyear, familyTree, true);
+                var secondParent = Person.FindPerson(secondParentName, secondParentBirthyear, familyTree, true);
+
+                firstParent.Partner = secondParent;
+                firstParent.Children.Add(person);
+                familyTree.Add(firstParent);
+                
+                secondParent.Partner = firstParent;
+                secondParent.Children.Add(person);
+                familyTree.Add(secondParent);
             }
         }
 
@@ -161,19 +166,19 @@ namespace FamilyTree
 
         private static void ShowRelations(string input, List<Person> familyTree)
         {
-            Console.WriteLine("");
-            Console.WriteLine("ShowingRelations!");
+
             var personInfo = input.Split('%');
-            var personName = personInfo[0].Remove(0,1);
+            var personName = personInfo[0];
             var personBirthyear = Convert.ToInt32(personInfo[1]);
             
             var person = Person.FindPerson(personName, personBirthyear, familyTree, false);
-            if (person == new Person())
+            if (person.Name == null)
             {
                 Console.WriteLine("Could not find the person.");
             }
             else
             {
+                Console.WriteLine("ShowingRelations!");
                 if (person.Parents.Count == 0)
                 {
                     Console.WriteLine(personName + " parents are unknown.");
@@ -200,10 +205,8 @@ namespace FamilyTree
                 for (var i = 0; i < person.Children.Count; i++)
                     Console.WriteLine("Child " + (i + 1) + " : " + person.Children[i].Name);
 
-                Console.WriteLine("BEFORE SHOWING GEN");
-                Console.WriteLine(person.GetGeneration(1));
-                Console.WriteLine("AFTER SHOWING GEN!");
+                Console.WriteLine("Generation: " + person.GetGeneration(1));
             }
-        }    
+        }
     }
 }
