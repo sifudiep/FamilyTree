@@ -9,6 +9,7 @@ namespace FamilyTree
         public List<Person> Children = new List<Person>();
         public string Name;
         public List<Person> Parents = new List<Person>();
+        public int Generation;
         public Person Partner;
 
         /// <summary>
@@ -43,8 +44,9 @@ namespace FamilyTree
             if (Parents.Count > 0)
             {
                 generationCounter++;
-                Parents[0].GetGeneration(generationCounter);
-            } 
+                generationCounter = Parents[0].GetGeneration(generationCounter);
+                
+            }
             
             return generationCounter;
         }

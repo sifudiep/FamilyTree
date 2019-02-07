@@ -12,3 +12,10 @@ C:\Users\Mike\Desktop\familytree\FamilyTree\obj\Debug\FamilyTree.exe
 C:\Users\Mike\Desktop\familytree\FamilyTree\obj\Debug\FamilyTree.pdb
 C:\Users\Mike\Desktop\familytree\FamilyTree\obj\Debug\FamilyTree.csprojAssemblyReference.cache
 C:\Users\Mike\Desktop\familytree\FamilyTree\obj\Debug\FamilyTree.csproj.CoreCompileInputs.cache
+C:\Users\Mikael Diep\Desktop\familyTree\FamilyTree\bin\Debug\FamilyTree.exe.config
+C:\Users\Mikael Diep\Desktop\familyTree\FamilyTree\bin\Debug\FamilyTree.exe
+C:\Users\Mikael Diep\Desktop\familyTree\FamilyTree\bin\Debug\FamilyTree.pdb
+C:\Users\Mikael Diep\Desktop\familyTree\FamilyTree\obj\Debug\FamilyTree.csprojAssemblyReference.cache
+C:\Users\Mikael Diep\Desktop\familyTree\FamilyTree\obj\Debug\FamilyTree.csproj.CoreCompileInputs.cache
+C:\Users\Mikael Diep\Desktop\familyTree\FamilyTree\obj\Debug\FamilyTree.exe
+C:\Users\Mikael Diep\Desktop\familyTree\FamilyTree\obj\Debug\FamilyTree.pdb
