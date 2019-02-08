@@ -27,9 +27,9 @@ namespace FamilyTree
                 {
                     Instructions();
                 }
-                else if (input == "!finished")
+                else if (input == "!exit")
                 {
-                    Finished(FamilyTree);
+                    notFinished = false;
                 }
                 else if (input == "!generation")
                 {
@@ -57,6 +57,9 @@ namespace FamilyTree
             }
         }
 
+        /// <summary>
+        /// Shows instructions for using the application.
+        /// </summary>
         private static void Instructions()
         {
             Console.Clear();
@@ -69,18 +72,11 @@ namespace FamilyTree
             Console.WriteLine("To find relations of a person, type in the following format : '?NAME%BIRTHYEAR'");
         }
 
-        private static void Finished(List<Person> familyTree)
-        {
-            Console.Clear();
-            Console.WriteLine("Finished!");
-            Console.WriteLine("Type '!save' if you wish to save the familyTree to a txt file. ");
-            var input = Console.ReadLine();
-            if (input == "!save")
-            {
-                
-            }
-        }
-
+        /// <summary>
+        /// Adds a person to a the family tree. 
+        /// </summary>
+        /// <param name="input">Input containing the person to be added and his relationships.</param>
+        /// <param name="familyTree">Family tree where the person is going to be added. </param>
         private static void AddToFamilyTree(string input, List<Person> familyTree)
         {
             var person = new Person();
@@ -138,6 +134,12 @@ namespace FamilyTree
             familyTree.Add(person);
         }
 
+        /// <summary>
+        /// Adds children or parent to a person.
+        /// </summary>
+        /// <param name="people">The people to be added to Persons relationships.</param>
+        /// <param name="person">The Person that's getting the people added to their relationships.</param>
+        /// <param name="familyTree">The family tree where the person gets added.</param>
         private static void AddChildrenAndPartner(string people, Person person, List<Person> familyTree)
         {
             if (people[0] == '#')
@@ -179,7 +181,11 @@ namespace FamilyTree
                 }
             }
         }
-
+        /// <summary>
+        /// Validates the input for using the application.
+        /// </summary>
+        /// <param name="input">Input to be validated.</param>
+        /// <returns>Returns true if input gets validated.</returns>
         private static bool ValidateInput(string input)
         {
             var people = input.Split('/');
@@ -206,6 +212,11 @@ namespace FamilyTree
             return true;
         }
 
+        /// <summary>
+        /// Finds a person in familyTree and shows all the relations that the person has. 
+        /// </summary>
+        /// <param name="input">Person to be found</param>
+        /// <param name="familyTree">Family tree to be examined</param>
         private static void ShowRelations(string input, List<Person> familyTree)
         {
             if (input.Contains('/'))
@@ -257,6 +268,10 @@ namespace FamilyTree
             }
         }
 
+        /// <summary>
+        /// Shows all people in generation order in a FamilyTree.
+        /// </summary>
+        /// <param name="familyTree">The family tree to be examined.</param>
         private static void ShowGenerations(List<Person> familyTree)
         {
             int latestGeneration = 1;

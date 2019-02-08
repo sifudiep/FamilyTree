@@ -3,6 +3,9 @@ using System.Collections.Generic;
 
 namespace FamilyTree
 {
+    /// <summary>
+    /// Person class is used for all registered persons in a family tree. 
+    /// </summary>
     public class Person
     {
         public int Birthyear;
@@ -39,6 +42,11 @@ namespace FamilyTree
             return new Person();
         }
 
+        /// <summary>
+        /// Recursive function that returns the generation of the person.
+        /// </summary>
+        /// <param name="generationCounter">Keeps track of the generation.</param>
+        /// <returns>Generation of person.</returns>
         public int GetGeneration(int generationCounter)
         {
             if (Parents.Count > 0)
